@@ -9,9 +9,16 @@ const label = document.createElement('label');
 const text = document.createElement('input');
 text.setAttribute('type','text');
 
+const submit = document.createElement('button');
+submit.setAttribute('type', 'submit');
+submit.innerHTML = "Submit";
+
 app.appendChild(div);
 
 div.appendChild(form);
 
 form.appendChild(label);
 form.appendChild(text);
+form.appendChild(submit);
+
+
