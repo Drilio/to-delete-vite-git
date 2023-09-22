@@ -30,10 +30,12 @@ div.appendChild(toDoList);
 
 document.getElementById('submit-button').addEventListener("click", submitTodo);
 
-function submitTodo(){
+function submitTodo(e){
+    e.preventDefault();
     const toDo = document.createElement('p');
-    toDo.innerHTML = text.innerText;
+    toDo.innerHTML = text.value;
     toDoList.appendChild(toDo);
+    text.value = "";
 }
 
 
