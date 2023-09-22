@@ -32,9 +32,20 @@ document.getElementById('submit-button').addEventListener("click", submitTodo);
 
 function submitTodo(e){
     e.preventDefault();
+
+    const contener = document.createElement('div')
+    contener.setAttribute('class', 'contener');
+
     const toDo = document.createElement('p');
+
+    const deleteButton = document.createElement('button');
+
+    deleteButton.innerHTML = "DELETE";
+    
     toDo.innerHTML = text.value;
-    toDoList.appendChild(toDo);
+    toDoList.appendChild(contener)
+    contener.appendChild(toDo);
+    contener.appendChild(deleteButton);
     text.value = "";
 }
 
